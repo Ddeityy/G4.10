@@ -13,7 +13,7 @@ fi
 
 python manage.py flush --no-input
 python manage.py migrate
-python manage.py collectstatic --no-input
+python manage.py collectstatic --no-input --clear
 export DJANGO_SUPERUSER_EMAIL=admin@test.com
 export DJANGO_SUPERUSER_PASSWORD=admin
 export DJANGO_SUPERUSER_USERNAME=admin
