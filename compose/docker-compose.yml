@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
   web:
-    image: ddeity/g_4_10:django
+    image: ddeityy/g_4_10:djangunicorn
     command: gunicorn djangodocker.wsgi:application --bind 0.0.0.0:8001
     volumes:
       - ./django/:/usr/src/app/
@@ -21,7 +21,7 @@ services:
       - POSTGRES_PASSWORD=hello_django
       - POSTGRES_DB=hello_django_dev
   nginx:
-    image: ddeity/g_4_10:nginx
+    image: ddeityy/g_4_10:nginx
     volumes:
       - static_volume:/home/app/web/staticfiles
     ports:
