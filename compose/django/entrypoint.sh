@@ -13,5 +13,10 @@ fi
 
 python manage.py flush --no-input
 python manage.py migrate
+python manage.py collectstatic --no-input
+export DJANGO_SUPERUSER_EMAIL=admin@test.com
+export DJANGO_SUPERUSER_PASSWORD=admin
+export DJANGO_SUPERUSER_USERNAME=admin
+python manage.py createsuperuser --no-input
 
 exec "$@"

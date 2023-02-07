@@ -1,3 +1,0 @@
-POSTGRES_USER=hello_django
-POSTGRES_POSTGRES_DB=hello_django_dev
-PASSWORD=hello_django

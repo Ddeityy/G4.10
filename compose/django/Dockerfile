@@ -6,6 +6,7 @@ WORKDIR /usr/src/app
 # set environment variables
 ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
+ENV DJANGO_SETTINGS_MODULE djangodocker.settings
 
 # install psycopg2 dependencies
 RUN apk update \
