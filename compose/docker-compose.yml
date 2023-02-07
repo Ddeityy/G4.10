@@ -10,7 +10,7 @@ services:
     ports:
       - "8001:8001"
     env_file:
-      - ./.env
+      - ./django/djangodocker/.env
     depends_on:
       - db
   db:
@@ -18,9 +18,9 @@ services:
     volumes:
       - postgres_data:/var/lib/postgresql/data/
     environment:
-      - POSTGRES_USER=hello_django
-      - POSTGRES_PASSWORD=hello_django
-      - POSTGRES_DB=hello_django_dev
+      - POSTGRES_USER=django
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_DB=django
   nginx:
     image: ddeityy/g_4_10:nginx
     volumes:

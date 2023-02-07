@@ -7,6 +7,17 @@ WORKDIR /usr/src/app
 ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
 ENV DJANGO_SETTINGS_MODULE djangodocker.settings
+ENV DEBUG 1
+ENV SECRET_KEY foo
+ENV DJANGO_ALLOWED_HOSTS localhost
+ENV SQL_ENGINE django.db.backends.postgresql
+ENV SQL_DATABASE django
+ENV SQL_USER django
+ENV SQL_PASSWORD password
+ENV SQL_HOST db
+ENV SQL_PORT 5432
+ENV DATABASE postgres
+
 
 # install psycopg2 dependencies
 RUN apk update \
